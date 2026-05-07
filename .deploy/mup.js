@@ -4,7 +4,7 @@ module.exports = {
       // TODO: set host address, username, and authentication method
       host: '13.56.187.242',
       username: 'ubuntu',
-      pem: '../../matt.pem'
+      pem: '~/.ssh/Mathew2026.pem'
       // password: 'server-password'
       // or neither for authenticate from ssh-agent
     }
@@ -12,8 +12,8 @@ module.exports = {
 
   meteor: {
     // TODO: change app name and path
-    name: 'app',
-    path: '../',
+    name: 'NCBI-downloader-webApp',
+    path: '/home/server/5_genomics/2_ncbi_downloader/NCBI-downloader-webApp',
 
     servers: {
       one: {},
@@ -27,7 +27,7 @@ module.exports = {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
       ROOT_URL: 'https://virtualapprentice.us',
-      MONGO_URL: 'mongodb://mcsimenc:mongolab@ds151242.mlab.com:51242/matt',
+      MONGO_URL: 'mongodb+srv://mcsimenc_db_user:mS6jFUJULxolQqds@ncbiseqdownloader2026.0x8jvwt.mongodb.net/?appName=NCBISeqDownloader2026',
 
       // PORT: 443
     },
@@ -43,7 +43,7 @@ module.exports = {
 
     docker: {
       // change to 'kadirahq/meteord' if your app is not using Meteor 1.4
-      image: 'abernix/meteord:base',
+      image: 'zodern/meteor:root',
       // imagePort: 80, // (default: 80, some images EXPOSE different ports)
     },
 
@@ -57,12 +57,4 @@ module.exports = {
     // You might need to disable it on CI servers
     enableUploadProgressBar: true
   },
-
-  mongo: {
-    port: 27017,
-    version: '3.4.1',
-    servers: {
-      one: {}
-    }
-  }
 };
